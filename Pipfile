@@ -15,7 +15,6 @@ nltk = "*"
 fastapi = "*"
 jinja2 = "*"
 uvicorn = "*"
-streamlit = "*"
 streamlit-chat = "*"
 tqdm = "*"
 langchain-pinecone = "*"
@@ -23,9 +22,10 @@ langchain-openai = "*"
 langchain-community = "*"
 isort = "*"
 langchainhub = "*"
+streamlit = "*"
 
 [dev-packages]
 
 [requires]
-python_version = "3.11"
-python_full_version = "3.11.0"
+python_version = "3.12"
+python_full_version = "3.12.8"
