@@ -49,8 +49,8 @@ if prompt:
         # store the chats to send to llm as memory of the chats.
         st.session_state["user_prompt_history"].append(prompt)
         st.session_state["chat_answers_history"].append(formatted_response)
-        st.session_state["chat_history"].append(("human", prompt))
-        st.session_state["chat_history"].append(("ai", generated_response["result"]))
+        st.session_state["chat_history"].append({"role": "human", "content": prompt})
+        st.session_state["chat_history"].append({"role": "ai", "content": generated_response["result"]})
 
 if st.session_state["chat_answers_history"]:
     for generated_response, user_query in zip(

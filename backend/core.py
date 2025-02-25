@@ -20,7 +20,7 @@ INDEX_NAME = os.environ["INDEX_NAME"]
 def run_llm(query: str, chat_history: List[Dict[str, Any]] = []):
     embeddings = OllamaEmbeddings(model="nomic-embed-text")
     docsearch = PineconeVectorStore(index_name=INDEX_NAME, embedding=embeddings)
-    chat = ChatOllama(model="mistra", verbose=True, temperature=0)
+    chat = ChatOllama(model="mistral", verbose=True, temperature=0)
 
     # this prompt actually rephrases the question with the previous
     # question and generated response. that is with the memory.
