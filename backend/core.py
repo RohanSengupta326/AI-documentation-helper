@@ -52,6 +52,7 @@ def run_llm(query: str, chat_history: List[Dict[str, Any]] = []):
     # adding the chat_history
     # this serves as the memory of the llm.
     # so that it can remember the conversation that it had.
+    # we can only send the chat_history in the format of list of dictionaries.
     result = qa.invoke(input={"input": query, "chat_history": chat_history})
 
     # just created a new dictionary with different key names.
